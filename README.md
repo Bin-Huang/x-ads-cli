@@ -1,6 +1,6 @@
 # x-ads-cli
 
-A X Ads CLI designed for AI agents. Wraps the official X Ads API with simple, agent-friendly commands.
+X Ads CLI designed for AI agents. Wraps the official X Ads API with simple, agent-friendly commands.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
