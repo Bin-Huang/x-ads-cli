@@ -1,6 +1,6 @@
 # x-ads-cli
 
-An X Ads CLI designed for AI agents. Wraps the official X Ads API with simple, agent-friendly commands.
+Give AI agents direct access to X Ads data. One command to authenticate, query campaigns, and pull performance stats -- no SDK, no docs to read, no tokens wasted on boilerplate.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
@@ -18,7 +18,7 @@ npx x-ads-cli --help
 
 ## How it works
 
-This CLI is a thin wrapper around the official [X Ads API](https://docs.x.com/x-ads-api/introduction) (v12). It uses OAuth 1.0a authentication (implemented natively with Node.js `crypto`, no external dependencies) and returns all API responses as JSON. No transformation or aggregation.
+Built on the official [X Ads API](https://docs.x.com/x-ads-api/introduction) (v12). Handles OAuth 1.0a signing natively with Node.js `crypto` (no external dependencies). Every command outputs structured JSON to stdout, ready for agents to parse without extra processing.
 
 Core endpoints covered:
 
