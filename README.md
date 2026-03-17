@@ -166,13 +166,112 @@ x-ads-cli stats abc1x2 \
 ```
 
 Options:
-- `--entity <type>` -- entity type: `CAMPAIGN`, `LINE_ITEM`, `PROMOTED_TWEET` (required)
+- `--entity <type>` -- entity type: `CAMPAIGN`, `LINE_ITEM`, `PROMOTED_TWEET`, `MEDIA_CREATIVE`, `FUNDING_INSTRUMENT`, `ORGANIC_TWEET` (required)
 - `--entity-ids <ids>` -- entity IDs, comma-separated (required)
 - `--start-time <time>` -- ISO 8601 start time (required)
 - `--end-time <time>` -- ISO 8601 end time (required)
 - `--granularity <gran>` -- `HOUR`, `DAY`, or `TOTAL` (default `DAY`)
 - `--metric-groups <groups>` -- comma-separated metric groups (default `ENGAGEMENT,BILLING`). Available: `ENGAGEMENT`, `BILLING`, `VIDEO`, `MEDIA`, `WEB_CONVERSION`, `MOBILE_CONVERSION`, `LIFE_TIME_VALUE_MOBILE_CONVERSION`
-- `--placement <placement>` -- `ALL_ON_TWITTER` or `PUBLISHER_NETWORK`
+- `--placement <placement>` -- `ALL_ON_TWITTER`, `PUBLISHER_NETWORK`, `SPOTLIGHT`, `TREND` (default `ALL_ON_TWITTER`)
+
+### promoted-tweets
+
+List promoted tweets for an ad account.
+
+```bash
+x-ads-cli promoted-tweets abc1x2
+x-ads-cli promoted-tweets abc1x2 --line-item-ids li1,li2
+```
+
+Options:
+- `--line-item-ids <ids>` -- filter by line item IDs (comma-separated)
+- `--count <n>` -- results per page (default 200)
+- `--cursor <cursor>` -- pagination cursor
+
+### media-creatives
+
+List media creatives for an ad account.
+
+```bash
+x-ads-cli media-creatives abc1x2
+```
+
+Options:
+- `--count <n>` -- results per page (default 200)
+- `--cursor <cursor>` -- pagination cursor
+
+### cards
+
+List cards (website, app install, etc.) for an ad account.
+
+```bash
+x-ads-cli cards abc1x2
+x-ads-cli cards abc1x2 --card-types WEBSITE,VIDEO_WEBSITE
+```
+
+Options:
+- `--card-types <types>` -- filter by types: WEBSITE, VIDEO_WEBSITE, IMAGE_APP_DOWNLOAD, etc. (comma-separated)
+- `--count <n>` -- results per page (default 200)
+- `--cursor <cursor>` -- pagination cursor
+
+### targeting-criteria
+
+List targeting criteria for an ad account.
+
+```bash
+x-ads-cli targeting-criteria abc1x2
+x-ads-cli targeting-criteria abc1x2 --line-item-ids li1,li2
+```
+
+Options:
+- `--line-item-ids <ids>` -- filter by line item IDs (comma-separated)
+- `--count <n>` -- results per page (default 200)
+- `--cursor <cursor>` -- pagination cursor
+
+### custom-audiences
+
+List custom audiences for an ad account.
+
+```bash
+x-ads-cli custom-audiences abc1x2
+```
+
+Options:
+- `--count <n>` -- results per page (default 200)
+- `--cursor <cursor>` -- pagination cursor
+
+### funding-instruments
+
+List funding instruments (payment methods) for an ad account.
+
+```bash
+x-ads-cli funding-instruments abc1x2
+```
+
+Options:
+- `--count <n>` -- results per page (default 200)
+
+### conversion-events
+
+List web conversion events for an ad account.
+
+```bash
+x-ads-cli conversion-events abc1x2
+```
+
+Options:
+- `--count <n>` -- results per page (default 200)
+
+### reach-estimate
+
+Get reach estimate for a line item.
+
+```bash
+x-ads-cli reach-estimate abc1x2 --line-item-id li1
+```
+
+Options:
+- `--line-item-id <id>` -- line item ID (required)
 
 ## Error output
 
