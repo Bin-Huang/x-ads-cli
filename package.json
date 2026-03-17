@@ -1,6 +1,6 @@
 {
   "name": "x-ads-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "X Ads CLI for AI agents",
   "type": "module",
   "bin": {
