@@ -1,5 +1,9 @@
 #!/usr/bin/env node
+import { createRequire } from "node:module";
 import { Command } from "commander";
+
+const require = createRequire(import.meta.url);
+const { version } = require("../package.json") as { version: string };
 import { registerAccountCommands } from "./commands/accounts.js";
 import { registerCampaignCommands } from "./commands/campaigns.js";
 import { registerLineItemCommands } from "./commands/line-items.js";
@@ -12,7 +16,7 @@ const program = new Command();
 program
   .name("x-ads-cli")
   .description("X Ads CLI for AI agents")
-  .version("0.1.0")
+  .version(version)
   .option("--format <format>", "Output format", "json")
   .option("--credentials <path>", "Path to credentials JSON file")
   .addHelpText(
