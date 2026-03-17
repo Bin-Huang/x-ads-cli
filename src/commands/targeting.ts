@@ -24,8 +24,8 @@ export function registerTargetingCommands(program: Command): void {
     });
 
   program
-    .command("tailored-audiences <account-id>")
-    .description("List tailored audiences (custom audiences) for an ad account")
+    .command("custom-audiences <account-id>")
+    .description("List custom audiences for an ad account")
     .option("--count <n>", "Results per page (default 200)", "200")
     .option("--cursor <cursor>", "Pagination cursor")
     .action(async (accountId: string, opts) => {
@@ -33,7 +33,7 @@ export function registerTargetingCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const params: Record<string, string> = { count: opts.count };
         if (opts.cursor) params.cursor = opts.cursor;
-        const data = await callApi(`/accounts/${accountId}/tailored_audiences`, { creds, params });
+        const data = await callApi(`/accounts/${accountId}/custom_audiences`, { creds, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);

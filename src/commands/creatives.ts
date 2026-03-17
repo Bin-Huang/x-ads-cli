@@ -43,7 +43,7 @@ export function registerCreativeCommands(program: Command): void {
   program
     .command("cards <account-id>")
     .description("List cards (website, app install, etc.) for an ad account")
-    .option("--card-type <type>", "Filter by type: WEBSITE, VIDEO_WEBSITE, IMAGE_APP_DOWNLOAD, etc.")
+    .option("--card-types <types>", "Filter by types: WEBSITE, VIDEO_WEBSITE, IMAGE_APP_DOWNLOAD, etc. (comma-separated)")
     .option("--count <n>", "Results per page (default 200)", "200")
     .option("--cursor <cursor>", "Pagination cursor")
     .action(async (accountId: string, opts) => {
@@ -51,10 +51,8 @@ export function registerCreativeCommands(program: Command): void {
         const creds = loadCredentials(program.opts().credentials);
         const params: Record<string, string> = { count: opts.count };
         if (opts.cursor) params.cursor = opts.cursor;
-        const endpoint = opts.cardType
-          ? `/accounts/${accountId}/cards/${opts.cardType.toLowerCase()}`
-          : `/accounts/${accountId}/cards`;
-        const data = await callApi(endpoint, { creds, params });
+        if (opts.cardTypes) params.card_types = opts.cardTypes;
+        const data = await callApi(`/accounts/${accountId}/cards`, { creds, params });
         output(data, program.opts().format);
       } catch (err) {
         fatal((err as Error).message);
