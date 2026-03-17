@@ -1,6 +1,6 @@
 # x-ads-cli
 
-Give AI agents direct access to X Ads data. One command to authenticate, query campaigns, and pull performance stats -- no SDK, no docs to read, no tokens wasted on boilerplate.
+X Ads CLI for AI agents (and humans). Pull engagement, billing, and conversion analytics for campaigns and promoted tweets, estimate reach, track media creatives, and more.
 
 **Works with:** OpenClaw, Claude Code, Cursor, Codex, and any agent that can run shell commands.
 
