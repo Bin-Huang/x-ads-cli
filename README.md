@@ -10,11 +10,7 @@ X Ads CLI for AI agents (and humans). Pull engagement, billing, and conversion a
 npm install -g x-ads-cli
 ```
 
-Or run directly with npx:
-
-```bash
-npx x-ads-cli --help
-```
+Or run directly: `npx x-ads-cli --help`
 
 ## How it works
 
