@@ -181,7 +181,7 @@ x-ads-cli stats abc1x2 \
 ```
 
 Required options:
-- `--entity <type>` -- entity type (required). Values: `CAMPAIGN`, `LINE_ITEM`, `PROMOTED_TWEET`, `PROMOTED_ACCOUNT`, `MEDIA_CREATIVE`, `FUNDING_INSTRUMENT`, `ORGANIC_TWEET`
+- `--entity <type>` -- entity type (required). Values: `CAMPAIGN`, `LINE_ITEM`, `PROMOTED_TWEET`, `MEDIA_CREATIVE`, `FUNDING_INSTRUMENT`, `ORGANIC_TWEET`
 - `--entity-ids <ids>` -- entity IDs, comma-separated (required)
 - `--start-time <time>` -- ISO 8601 start time (required)
 - `--end-time <time>` -- ISO 8601 end time (required)
