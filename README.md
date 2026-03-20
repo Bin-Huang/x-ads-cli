@@ -8,7 +8,7 @@ X Ads CLI for AI agents (and humans). Pull engagement, billing, and conversion a
 
 Tell your AI agent (e.g. OpenClaw):
 
-> Install the CLI and skills from https://github.com/Bin-Huang/x-ads-cli
+> Install this CLI and skills from https://github.com/Bin-Huang/x-ads-cli
 
 Or install manually:
 
