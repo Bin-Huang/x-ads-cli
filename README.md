@@ -6,8 +6,17 @@ X Ads CLI for AI agents (and humans). Pull engagement, billing, and conversion a
 
 ## Installation
 
+Tell your AI agent (e.g. OpenClaw):
+
+> Install the CLI and skills from https://github.com/Bin-Huang/x-ads-cli
+
+Or install manually:
+
 ```bash
 npm install -g x-ads-cli
+
+# Add skills for AI agents (Claude Code, Cursor, Codex, etc.)
+npx skills add Bin-Huang/x-ads-cli
 ```
 
 Or run directly: `npx x-ads-cli --help`
