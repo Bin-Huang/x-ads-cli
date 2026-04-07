@@ -1,7 +1,7 @@
 {
   "name": "x-ads-cli",
   "version": "1.0.4",
-  "description": "X Ads CLI for AI agents",
+  "description": "X Ads CLI & Skills for AI agents",
   "type": "module",
   "bin": {
     "x-ads-cli": "dist/index.js"

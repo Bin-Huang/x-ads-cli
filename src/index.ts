@@ -15,7 +15,7 @@ const program = new Command();
 
 program
   .name("x-ads-cli")
-  .description("X Ads CLI for AI agents")
+  .description("X Ads CLI & Skills for AI agents")
   .version(version)
   .option("--format <format>", "Output format", "json")
   .option("--credentials <path>", "Path to credentials JSON file")
